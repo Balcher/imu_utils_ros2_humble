@@ -22,3 +22,14 @@ imu_utils是一个轻量级的IMU标定工具，主要用于校准IMU的偏差�
     source ./install/setup.bash
     colcon build --packages-select imu_utils
     ```
+
+# 运行
+1. 首先录制一段IMU的数据，这个数据时间最好长一点，比如一两个小时这种。
+2. 设置相关参数，在`/imu_utils.launch.py`中，更改`imu_topic`的话题名称。
+3. 然后编译一下。
+4. 同时运行rosbag和launch文件，或者先打开launch文件，然后再运行,rosbag运行的时候是以200倍速度播放的。
+    ```
+    ros2 launch imu_utils imu_utils.launch.py
+    ros2 bag play -r 200 rosbag2_2024_12_17-14_33_26/
+    ```
+5. 在所设置的保存路径下会保存相关的标定结果。
