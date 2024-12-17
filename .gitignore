@@ -1,0 +1,33 @@
+# ROS2 specific
+build/
+install/
+log/
+#*.msg
+#*.srv
+#*.action
+#*.yaml
+#*.test
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+*.cmake
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Others
+.DS_Store
+Thumbs.db
+*.swp
